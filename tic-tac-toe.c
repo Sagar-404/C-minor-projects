@@ -150,6 +150,11 @@ int main()
     board(list);
     for (int i = 1; i < 10; i++)
     {
+        *p_help += 10;
+        input(values, p_score, list, p_help);
+        // game(values);
+        board(list);
+
         int out = outcome(list);
         *p_draw = out;
         if (out == 1)
@@ -162,11 +167,6 @@ int main()
             printf(" !! Player 2 Won !!\n");
             break;
         }
-
-        *p_help += 10;
-        input(values, p_score, list, p_help);
-        // game(values);
-        board(list);
     }
     if (*p_score == 90 && draw != 1 && draw != 2)
     {
